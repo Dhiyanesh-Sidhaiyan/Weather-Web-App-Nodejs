@@ -12,7 +12,7 @@ const foreCast = (latitude, longitude, callback) => {
             } else if (!body.current.temperature && !body.current.feelslike) {
                 callback('There is no forcast available. Please try another', undefined);
             } else {
-                const data = `${body.current.weather_descriptions}. It is currently ${body.current.temperature} degree, There is a ${body.current.feelslike}% chance of rain`;
+                const data = `${body.current.weather_descriptions}. It is currently ${body.current.temperature} degree, There is a ${body.current.feelslike}% chance of rain and humidity is ${body.current.humidity}%`;
                 callback(undefined, data);
             }
 
