@@ -6,6 +6,7 @@ const hbs = require('hbs'); // hbs - > Handle bar for dynamic templates.. instea
 //utility
 const geoCode = require('./utils/geocode');
 const foreCast = require('./utils/forecast');
+const port = process.env.PORT || 3000;
 
 //directory path configuration
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -96,6 +97,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Web server up and listening on port 3000');
 });
